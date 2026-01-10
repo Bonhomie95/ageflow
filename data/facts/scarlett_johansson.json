@@ -1,0 +1,34 @@
+{
+  "name": "Scarlett Johansson",
+  "slug": "scarlett_johansson",
+  "wikipedia_title": "Scarlett Johansson",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Scarlett_Johansson",
+  "wikidata_id": "Q34436",
+  "birth_date": "1984-11-22",
+  "confidence": 0.98,
+  "target_year_end": 2025,
+  "sources": {
+    "wikipedia": true,
+    "wikidata": true
+  },
+  "timeline": [],
+  "raw": {
+    "wikipedia": {
+      "description": "American actress and singer (born 1984)",
+      "extract": "Scarlett Ingrid Johansson ( ; born November 22, 1984) is an American actress and singer. Her films as a leading actress have grossed over $15.4 billion worldwide, making her the highest-grossing lead actor in history. Johansson's various accolades include a British Academy Film Award and Tony Award, as well as nominations for two Academy Awards and five Golden Globe Awards.\nJohansson first appeared on stage in an off-Broadway play as a child actress. She made her film debut in the fantasy comedy North (1994) and gained early recognition for her roles in Manny & Lo (1996), The Horse Whisperer (1998), and Ghost World (2001). Her shift to adult roles came in 2003 with Lost in Translation, for which she won the BAFTA Award for Best Actress. She continued to gain praise for playing a 17th-century servant in Girl with a Pearl Earring (2003), a troubled teenager in A Love Song for Bobby Long (2004) and a struggling actress in Match Point (2005). The lattermost marked her first collaboration with Woody Allen, who later directed her in Scoop (2006) and Vicky Cristina Barcelona (2008). Johansson's other works of this period include The Prestige (2006) and the albums Anywhere I Lay My Head (2008) and Break Up (2009), both of which charted on the Billboard 200.\nIn 2010, Johansson debuted on Broadway in a revival of A View from the Bridge, which won her the Tony Award for Best Performance by a Featured Actress in a Play, and began portraying Black Widow in the Marvel Cinematic Universe film Iron Man 2. She reprised the role in eight films, leading up to her solo feature Black Widow (2021), gaining global stardom. During this period, Johansson starred in the science fiction films Her (2013), Under the Skin (2013) and Lucy (2014). She received two simultaneous Academy Award nominations—Best Actress and Best Supporting Actress—for the respective roles of an actress going through a divorce in the drama Marriage Story (2019) and a single mother in Nazi Germany in the satire Jojo Rabbit (2019), becoming one of the few actors to achieve this feat.\nThe world's highest-paid actress in 2018 and 2019, Johansson has been featured multiple times on the Forbes Celebrity 100 list. Time named her one of the 100 most influential people in the world in 2021 and 2025. Labeled a sex symbol, Johansson has been referred to as one of the world's most attractive women by various media outlets. She is a prominent brand endorser and supports several charitable causes. Divorced from actor Ryan Reynolds and businessman Romain Dauriac, Johansson has been married to comedian Colin Jost since 2020. She has two children, one with Dauriac and another with Jost.",
+      "pageid": 20913246
+    },
+    "wikidata": {
+      "occupations_qids": [
+        "Q10800557",
+        "Q177220",
+        "Q4610556",
+        "Q2259451",
+        "Q2405480",
+        "Q55960555",
+        "Q2526255",
+        "Q33999"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Lionel Messi",
+  "slug": "lionel_messi",
+  "wikipedia_title": "Lionel Messi",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Lionel_Messi",
+  "wikidata_id": "Q615",
+  "birth_date": "1987-06-24",
+  "confidence": 0.98,
+  "target_year_end": 2025,
+  "sources": {
+    "wikipedia": true,
+    "wikidata": true
+  },
+  "timeline": [],
+  "raw": {
+    "wikipedia": {
+      "description": "Argentine footballer (born 1987)",
+      "extract": "Lionel Andrés \"Leo\" Messi (born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and the Argentina national team. Widely regarded as one of the greatest players in history, Messi has set numerous records for individual accolades won throughout his professional footballing career, including eight Ballon d'Ors, six European Golden Shoes, and eight times being named the world's best player by FIFA. In 2025, he was named the All Time Men's World Best Player by the IFFHS. He is the most decorated player in the history of professional football having won 46 team trophies. Messi's records include most goals in a calendar year (91), most goals for a single club (672 for Barcelona), most goals in La Liga (474), most assists in international football (61), most goal contributions in the FIFA World Cup (21), and most goal contributions in the Copa América (32). A prolific goalscorer and creative playmaker, Messi has scored over 890 senior career goals and provided over 400 assists for club and country—the most of any player—resulting in over 1,300 goal contributions, the highest total in the sport's history.\nMessi made his competitive debut for Barcelona at age 17 in October 2004. He gradually established himself as an integral player for the club, and during his first uninterrupted season at age 22 in 2008–09 he helped Barcelona achieve the first treble in Spanish football. This resulted in Messi winning the first of four consecutive Ballon d'Ors, and by the 2011–12 season he set the European record for most goals in a season and established himself as Barcelona's all-time top scorer. During the 2014–15 campaign, where he became the all-time top scorer in La Liga, he led Barcelona to a historic second treble, leading to a fifth Ballon d'Or in 2015. He assumed Barcelona's captaincy in 2018 and won a record sixth Ballon d'Or in 2019. At Barcelona, Messi won a club-record 34 trophies, including ten La Liga titles and four Champions Leagues, among others. Financial difficulties at Barcelona led to Messi signing with French club Paris Saint-Germain in August 2021, where he won the Ligue 1 title during both of his seasons there. He joined MLS club Inter Miami in July 2023, leading the club to win their first MLS Cup in 2025, whilst also winning back-to-back league MVP awards in 2024 and 2025.\nAn Argentine international, Messi is the national team's all-time leading goalscorer and most-capped player. Several years after his senior debut in 2005, he won the gold medal at the 2008 Summer Olympics. Assuming captaincy in 2011, he led Argentina to three consecutive finals in the 2014 World Cup, the 2015 Copa América and the Copa América Centenario, all of which they lost. After initially announcing his international retirement in 2016, he returned to help his country narrowly qualify for the 2018 World Cup. Messi was central to ending Argentina's 28-year trophy drought by winning the 2021 Copa América, which helped him secure his seventh Ballon d'Or that year. In the following year, he led Argentina to winning the 2022 World Cup, the country's first in 36 years. This followed with a record-extending eighth Ballon d'Or in 2023. Messi was victorious at the 2024 Copa América, his third major international title.\nMessi has endorsed sportswear company Adidas since 2006. According to France Football, he was the world's highest-paid footballer for five years out of six between 2009 and 2014, and was ranked the world's highest-paid athlete by Forbes in 2019 and 2022. Messi was among Time's 100 most influential people in the world in 2011, 2012, and 2023. In 2020 and 2023, he was named the Laureus World Sportsman of the Year, the first team-sport athlete to win it. In 2020, Messi was named to the Ballon d'Or Dream Team and became the second footballer and second team-sport athlete to surpass $1 billion in career earnings. Following his arrival and impact on football in the US, Messi was named Time's Athlete of the Year in 2023, and was bestowed with the Presidential Medal of Freedom by US president Joe Biden in 2025.\n\n",
+      "pageid": 2150841
+    },
+    "wikidata": {
+      "occupations_qids": [
+        "Q937857"
+      ]
+    }
+  }
+}

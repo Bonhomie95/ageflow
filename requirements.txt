@@ -1,0 +1,38 @@
+# Core
+python-dotenv
+dotenv
+requests
+pydantic
+tqdm
+loguru
+
+# Data & storage
+sqlite-utils
+python-dateutil
+
+# Image processing
+opencv-python
+pillow
+numpy
+scikit-image
+mediapipe
+
+# Face alignment & landmarks
+face-alignment
+
+# Video rendering
+moviepy
+imageio
+imageio-ffmpeg
+
+# ML / smoothing
+scipy
+
+# APIs
+google-api-python-client
+google-auth
+google-auth-oauthlib
+
+# Optional (search / metadata)
+serpapi
+wikipedia-api

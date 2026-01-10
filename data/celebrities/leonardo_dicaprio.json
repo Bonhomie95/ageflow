@@ -1,0 +1,20 @@
+{
+  "name": "Leonardo DiCaprio",
+  "birth_date": "1974-11-11",
+  "anchors": [
+    {
+      "year": 1997,
+      "event": "Titanic premiere",
+      "image_url": "...",
+      "source": "Getty",
+      "confidence": 0.95
+    },
+    {
+      "year": 2014,
+      "event": "Wolf of Wall Street",
+      "image_url": "...",
+      "source": "Wikimedia",
+      "confidence": 0.92
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Leonardo DiCaprio",
+  "slug": "leonardo_dicaprio",
+  "wikipedia_title": "Leonardo DiCaprio",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio",
+  "wikidata_id": "Q38111",
+  "birth_date": "1974-11-11",
+  "confidence": 0.98,
+  "target_year_end": 2025,
+  "sources": {
+    "wikipedia": true,
+    "wikidata": true
+  },
+  "timeline": [],
+  "raw": {
+    "wikipedia": {
+      "description": "American actor and producer (born 1974)",
+      "extract": "Leonardo Wilhelm DiCaprio ( ; Italian: [diˈkaːprjo]; born November 11, 1974) is an American actor and film producer. Known for his work in biographical and period films, he is the recipient of numerous accolades, including an Academy Award, a British Academy Film Award, a Silver Bear and three Golden Globe Awards. His films as a leading actor have grossed $7 billion worldwide, and he has been placed eight times in annual rankings of the world's highest-paid actors.\nBorn in Los Angeles, DiCaprio began his career in the late 1980s by appearing in television commercials. He had a recurring role in the sitcom Parenthood (1990–1991), and had his first major film part as author Tobias Wolff in This Boy's Life (1993). He received critical acclaim and his first Academy Award nomination for playing a developmentally disabled boy in What's Eating Gilbert Grape (1993). DiCaprio achieved international stardom with the star-crossed romances Romeo + Juliet (1996) and Titanic (1997). After the latter became the highest-grossing film in the world at the time, he reduced his workload for a few years. In an attempt to shed his image of a romantic hero, DiCaprio sought roles in other genres, including the 2002 crime dramas Catch Me If You Can and Gangs of New York; the latter marked the first of his many successful collaborations with director Martin Scorsese.\nDiCaprio continued to gain acclaim for his performances in the biopic The Aviator (2004), the political thriller Blood Diamond (2006), the crime drama The Departed (2006), and the romantic drama Revolutionary Road (2008). He later made environmental documentaries and starred in several high-profile directors' successful projects, including the thrillers Inception and Shutter Island (both 2010); the western Django Unchained (2012); the romantic drama The Great Gatsby (2013) for which he won the AACTA Award for Best Actor in a Leading Role; the biopic The Wolf of Wall Street (2013); the survival drama The Revenant (2015), for which he won the Academy Award for Best Actor; the comedy-drama Once Upon a Time in Hollywood (2019); and the crime dramas Killers of the Flower Moon (2023) and One Battle After Another (2025).\nDiCaprio is the founder of Appian Way Productions—a production company that has made some of his films and the documentary series Greensburg (2008–2010)—and Leonardo DiCaprio Foundation, a nonprofit organization devoted to promoting environmental awareness. A United Nations Messenger of Peace, he regularly supports charitable causes. In 2005, he was named a Commander of the Order of Arts and Letters for his contributions to the arts, and in 2016, he appeared in Time magazine's 100 most influential people in the world. DiCaprio was voted one of the 50 greatest actors of all time in a 2022 readers' poll by Empire magazine.",
+      "pageid": 52711
+    },
+    "wikidata": {
+      "occupations_qids": [
+        "Q33999",
+        "Q10800557",
+        "Q28389",
+        "Q10798782",
+        "Q3282637",
+        "Q2259451",
+        "Q3578589"
+      ]
+    }
+  }
+}
