@@ -1,0 +1,561 @@
+{
+  "celebrity_name": "Leonardo DiCaprio",
+  "celebrity_slug": "leonardo_dicaprio",
+  "target_year_end": 2025,
+  "candidates": [
+    {
+      "source": "wikimedia",
+      "title": "File:Brad Pitt, Margot Robbie, and Leonardo DiCaprio 2019 by Glenn Francis.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Brad_Pitt,_Margot_Robbie,_and_Leonardo_DiCaprio_2019_by_Glenn_Francis.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Brad_Pitt%2C_Margot_Robbie%2C_and_Leonardo_DiCaprio_2019_by_Glenn_Francis.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/001_filebrad_pitt_margot_robbie_and_leonardo_dicaprio_2019_by_gl.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2019-10-24",
+        "year": 2019,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2019-07-22",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Emilio Insolera, Leonardo Di Caprio.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Emilio_Insolera,_Leonardo_Di_Caprio.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Emilio_Insolera%2C_Leonardo_Di_Caprio.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/002_fileemilio_insolera_leonardo_di_capriojpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2020-01-05",
+        "year": 2020,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2020-01-05",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:LeonardoDiCaprioNov08.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:LeonardoDiCaprioNov08.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/LeonardoDiCaprioNov08.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/003_fileleonardodicaprionov08jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2008-11-06",
+        "year": 2008,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2011-10-20",
+        "commons_date_method": "commons:DateTime"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio & Paul Thomas Anderson - BFI Southbank.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_-_BFI_Southbank.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_-_BFI_Southbank.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/004_fileleonardo_dicaprio_paul_thomas_anderson_bfi_southbankjpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2025-11-20",
+        "year": 2025,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2025-11-19",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio & Paul Thomas Anderson - BFI Southbank 2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_-_BFI_Southbank_2.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_-_BFI_Southbank_2.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/005_fileleonardo_dicaprio_paul_thomas_anderson_bfi_southbank_2jp.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2025-11-20",
+        "year": 2025,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2025-11-19",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio & Paul Thomas Anderson In Conversation - BFI Southbank - Wednesday 19th November 2025.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_In_Conversation_-_BFI_Southbank_-_Wednesday_19th_November_2025.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Leonardo_DiCaprio_%26_Paul_Thomas_Anderson_In_Conversation_-_BFI_Southbank_-_Wednesday_19th_November_2025.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/006_fileleonardo_dicaprio_paul_thomas_anderson_in_conversation_b.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2025-11-20",
+        "year": 2025,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2025-11-19",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio (15329219761).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_(15329219761).jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Leonardo_DiCaprio_%2815329219761%29.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/007_fileleonardo_dicaprio_15329219761jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-09-23",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-09-23",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio (29736977296).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_(29736977296).jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Leonardo_DiCaprio_%2829736977296%29.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/008_fileleonardo_dicaprio_29736977296jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2016-09-15",
+        "year": 2016,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2016-09-09",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio - BFI Southbank.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_-_BFI_Southbank.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Leonardo_DiCaprio_-_BFI_Southbank.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/009_fileleonardo_dicaprio_bfi_southbankjpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2025-11-20",
+        "year": 2025,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2025-11-19",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio 2002.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2002.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Leonardo_DiCaprio_2002.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/010_fileleonardo_dicaprio_2002jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2010-01-09",
+        "year": 2010,
+        "method": "commons:DateTime",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2010-01-09",
+        "commons_date_method": "commons:DateTime"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio 2010.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2010.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Leonardo_DiCaprio_2010.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/011_fileleonardo_dicaprio_2010jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2010-03-18",
+        "year": 2010,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2010-02-13",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio 2014.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2014.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Leonardo_DiCaprio_2014.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/012_fileleonardo_dicaprio_2014jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-05-03",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-01-09",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio 2016 2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2016_2.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Leonardo_DiCaprio_2016_2.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/013_fileleonardo_dicaprio_2016_2jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2016-01-18",
+        "year": 2016,
+        "method": "commons:DateTimeOriginal",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2016-01-18",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio 2017.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2017.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Leonardo_DiCaprio_2017.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/014_fileleonardo_dicaprio_2017jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2017-06-08",
+        "year": 2017,
+        "method": "commons:DateTimeOriginal",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2017-06-08",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio Attends an Exhibit at the \"Our Ocean\" Conference.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Attends_an_Exhibit_at_the_%22Our_Ocean%22_Conference.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Leonardo_DiCaprio_Attends_an_Exhibit_at_the_%22Our_Ocean%22_Conference.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/015_fileleonardo_dicaprio_attends_an_exhibit_at_the_our_ocean_co.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-21",
+        "commons_date_method": "commons:DateTime"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio Berlinale 2010.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Berlinale_2010.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Leonardo_DiCaprio_Berlinale_2010.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/016_fileleonardo_dicaprio_berlinale_2010jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2010-03-18",
+        "year": 2010,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2010-02-13",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio Delivers Remarks at the \"Our Ocean\" Conference.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Delivers_Remarks_at_the_%22Our_Ocean%22_Conference.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Leonardo_DiCaprio_Delivers_Remarks_at_the_%22Our_Ocean%22_Conference.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/017_fileleonardo_dicaprio_delivers_remarks_at_the_our_ocean_conf.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio Delivers Remarks at the \"Our Ocean\" Conference - 14445172515.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Delivers_Remarks_at_the_%22Our_Ocean%22_Conference_-_14445172515.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Leonardo_DiCaprio_Delivers_Remarks_at_the_%22Our_Ocean%22_Conference_-_14445172515.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/018_fileleonardo_dicaprio_delivers_remarks_at_the_our_ocean_conf.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio January 2014.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_January_2014.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Leonardo_DiCaprio_January_2014.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/019_fileleonardo_dicaprio_january_2014jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2016-02-29",
+        "year": 2016,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-01-09",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio June 2014.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_June_2014.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Leonardo_DiCaprio_June_2014.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/020_fileleonardo_dicaprio_june_2014jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio by David Shankbone.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_by_David_Shankbone.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Leonardo_DiCaprio_by_David_Shankbone.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/021_fileleonardo_dicaprio_by_david_shankbonejpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2007-05-30",
+        "year": 2007,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2007-04-26",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio crop.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_crop.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Leonardo_DiCaprio_crop.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/022_fileleonardo_dicaprio_cropjpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2012-08-19",
+        "year": 2012,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2012-08-19",
+        "commons_date_method": "commons:DateTime"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio cropped and rotated (cropped).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_cropped_and_rotated_(cropped).jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Leonardo_DiCaprio_cropped_and_rotated_%28cropped%29.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/023_fileleonardo_dicaprio_cropped_and_rotated_croppedjpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2017-06-08",
+        "year": 2017,
+        "method": "commons:DateTimeOriginal",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2017-06-08",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio from J. Edgar by Rajasekharan 2020.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_from_J._Edgar_by_Rajasekharan_2020.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Leonardo_DiCaprio_from_J._Edgar_by_Rajasekharan_2020.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/024_fileleonardo_dicaprio_from_j_edgar_by_rajasekharan_2020jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2020-02-05",
+        "year": 2020,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2020-02-06",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo DiCaprio visited Goddard Saturday to discuss Earth science with Piers Sellers (26711128555).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_visited_Goddard_Saturday_to_discuss_Earth_science_with_Piers_Sellers_(26711128555).jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Leonardo_DiCaprio_visited_Goddard_Saturday_to_discuss_Earth_science_with_Piers_Sellers_%2826711128555%29.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/025_fileleonardo_dicaprio_visited_goddard_saturday_to_discuss_ea.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2016-04-26",
+        "year": 2016,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2016-04-23",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo Dicaprio Cannes 2019.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_Dicaprio_Cannes_2019.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/026_fileleonardo_dicaprio_cannes_2019jpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2019-05-21",
+        "year": 2019,
+        "method": "commons:DateTimeOriginal",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2019-05-21",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Leonardo Dicaprio Signature.png",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leonardo_Dicaprio_Signature.png",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Leonardo_Dicaprio_Signature.png",
+      "local_path": "images/raw/leonardo_dicaprio/027_fileleonardo_dicaprio_signaturepng.png",
+      "verified": true,
+      "verified_date": {
+        "date": "2024-10-27",
+        "year": 2024,
+        "method": "commons:DateTimeOriginal",
+        "confidence": 0.95
+      },
+      "meta": {
+        "commons_date": "2024-10-27",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Secretary Kerry Meets With Leonardo DiCaprio.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Secretary_Kerry_Meets_With_Leonardo_DiCaprio.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Secretary_Kerry_Meets_With_Leonardo_DiCaprio.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/028_filesecretary_kerry_meets_with_leonardo_dicapriojpg.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Secretary Kerry Poses for a photo with Leonardo DiCaprio 2014.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Secretary_Kerry_Poses_for_a_photo_with_Leonardo_DiCaprio_2014.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Secretary_Kerry_Poses_for_a_photo_with_Leonardo_DiCaprio_2014.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/029_filesecretary_kerry_poses_for_a_photo_with_leonardo_dicaprio.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    },
+    {
+      "source": "wikimedia",
+      "title": "File:Secretary Kerry and Leonardo DiCaprio Attend an Exhibit at the \"Our Ocean\" Conference.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Secretary_Kerry_and_Leonardo_DiCaprio_Attend_an_Exhibit_at_the_%22Our_Ocean%22_Conference.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Secretary_Kerry_and_Leonardo_DiCaprio_Attend_an_Exhibit_at_the_%22Our_Ocean%22_Conference.jpg",
+      "local_path": "images/raw/leonardo_dicaprio/030_filesecretary_kerry_and_leonardo_dicaprio_attend_an_exhibit_.jpg",
+      "verified": true,
+      "verified_date": {
+        "date": "2014-06-17",
+        "year": 2014,
+        "method": "exif:DateTime",
+        "confidence": 0.93
+      },
+      "meta": {
+        "commons_date": "2014-06-17",
+        "commons_date_method": "commons:DateTimeOriginal"
+      }
+    }
+  ],
+  "verified_years": [
+    2007,
+    2008,
+    2010,
+    2012,
+    2014,
+    2016,
+    2017,
+    2019,
+    2020,
+    2024,
+    2025
+  ],
+  "verified_count": 30
+}

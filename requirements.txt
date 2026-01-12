@@ -15,7 +15,10 @@ opencv-python
 pillow
 numpy
 scikit-image
-mediapipe
+dlib
+dlib-bin
+mediapipe==0.10.9
+
 
 # Face alignment & landmarks
 face-alignment
