@@ -1,0 +1,54 @@
+{
+  "celebrity": "Leonardo DiCaprio",
+  "anchors": [
+    {
+      "year": 2005,
+      "age": 31,
+      "image_path": "images/raw/leonardo_dicaprio/044_filedicapriocrawfordschwarzeneggerbyluiginovijpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2008,
+      "age": 34,
+      "image_path": "images/raw/leonardo_dicaprio/003_fileleonardodicaprionov08jpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2011,
+      "age": 37,
+      "image_path": "images/raw/leonardo_dicaprio/069_fileleonardo_dicaprio_and_carey_mulligan_6867853715jpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2014,
+      "age": 40,
+      "image_path": "images/raw/leonardo_dicaprio/008_fileleonardo_dicaprio_15329219761jpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2017,
+      "age": 43,
+      "image_path": "images/raw/leonardo_dicaprio/018_fileleonardo_dicaprio_2017jpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2020,
+      "age": 46,
+      "image_path": "images/raw/leonardo_dicaprio/002_fileemilio_insolera_leonardo_di_capriojpg.jpg",
+      "source": "wikimedia",
+      "verified": true
+    },
+    {
+      "year": 2023,
+      "age": 49,
+      "image_path": "images/raw/leonardo_dicaprio/091_fileannabel_elliot_ted_verity_bobby_sharma_in_centre_box_002.jpg",
+      "source": "wikimedia",
+      "verified": true
+    }
+  ]
+}

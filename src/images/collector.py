@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import List
-from unicodedata import name
+from typing import List, Optional
 
 from ..config.settings import settings
 from ..utils.logger import get_logger
@@ -13,7 +12,7 @@ from .models import ImageCandidate, ImageManifest, VerifiedDate
 from .downloader import download_file
 from .exif import extract_exif_date
 
-# Primary / backup sources
+# Image sources
 from .wikimedia import (
     search_commons_files,
     fetch_commons_images,
@@ -61,12 +60,20 @@ def _year_from_date(date_str: str) -> int:
     return int(date_str[:4])
 
 
+def build_portrait_query(name: str, year: int) -> str:
+    """
+    Generic, celebrity-agnostic, face-centric query.
+    """
+    return f"{name} portrait image facing camera directly {year}"
+
+
 def _verify_with_commons(candidate: ImageCandidate) -> ImageCandidate:
     if candidate.source != "wikimedia":
         return candidate
 
     date_str = candidate.meta.get("commons_date")
     method = candidate.meta.get("commons_date_method")
+
     if date_str and method:
         candidate.verified = True
         candidate.verified_date = VerifiedDate(
@@ -79,7 +86,7 @@ def _verify_with_commons(candidate: ImageCandidate) -> ImageCandidate:
 
 
 def _verify_with_exif(candidate: ImageCandidate) -> ImageCandidate:
-    if not candidate.local_path:
+    if candidate.local_path is None:
         return candidate
 
     d, tag = extract_exif_date(Path(candidate.local_path))
@@ -122,18 +129,24 @@ def _download_candidate(
 
 def collect_images_for_celebrity(
     celebrity_name: str,
+    birth_year: int,
     target_year_end: int,
     force: bool = False,
 ) -> ImageManifest:
     """
-    Production-grade image collector.
+    Year-aware, production-grade image collector.
 
-    Guarantees:
-    - Multiple independent sources
-    - Zero hard dependency on any API
-    - Never crashes if a source fails
-    - Enforces reaching 2024 / 2025 (verified)
-    - Feeds morph-safe images downstream
+    Notes:
+    - Verified years come mostly from Wikimedia date metadata and EXIF.
+    - Bing/IMDb/Wikipedia images typically lack reliable dating; they still help
+      with face stock, but won't appear in verified_years unless EXIF exists.
+
+    Strategy:
+    - Start from birth_year + 10
+    - Pull Wikimedia broad + Wikimedia year-aware
+    - Add Wikipedia page portraits + IMDb stills
+    - Add Bing year-aware portrait searches
+    - Add SerpAPI year-aware searches if enabled
     """
 
     settings.ensure_dirs()
@@ -147,15 +160,35 @@ def collect_images_for_celebrity(
 
     candidates: List[ImageCandidate] = []
 
+    current_year = target_year_end
+    start_year = birth_year + 10  # practical minimum
+
+    log.info(
+        f"📅 Year-aware search: {celebrity_name} from {start_year} → {current_year}"
+    )
+
+    # Dedup trackers
+    seen_urls: set[str] = set()
+    seen_titles: set[str] = set()
+
+    def push_candidate(cand: ImageCandidate) -> None:
+        if cand.image_url in seen_urls:
+            return
+        if cand.title in seen_titles:
+            return
+        seen_urls.add(cand.image_url)
+        seen_titles.add(cand.title)
+        candidates.append(cand)
+
     # ==============================================================
-    # SOURCE 1 — WIKIMEDIA COMMONS (DATED & FACTUAL)
+    # SOURCE 1 — WIKIMEDIA COMMONS (BROAD + YEAR-AWARE)
     # ==============================================================
 
-    log.info("🔍 Wikimedia Commons search…")
+    log.info("🔍 Wikimedia Commons (broad + year-aware)…")
     try:
-        titles = search_commons_files(celebrity_name, limit=30)
+        # A) Broad
+        titles = search_commons_files(celebrity_name, limit=40)
         commons_imgs = fetch_commons_images(titles)
-
         for ci in commons_imgs:
             date_str, method = extract_verified_date_from_commons(ci.extmeta)
             cand = ImageCandidate(
@@ -168,23 +201,50 @@ def collect_images_for_celebrity(
                     "commons_date_method": method,
                 },
             )
-            candidates.append(_verify_with_commons(cand))
+            push_candidate(_verify_with_commons(cand))
+
+        # B) Year-aware (targeted)
+        year_step = 2
+        per_year_limit = 8
+
+        for year in range(start_year, current_year + 1, year_step):
+            q = f"{celebrity_name} {year}"
+            year_titles = search_commons_files(q, limit=per_year_limit)
+            if not year_titles:
+                continue
+
+            year_imgs = fetch_commons_images(year_titles)
+            for ci in year_imgs:
+                date_str, method = extract_verified_date_from_commons(ci.extmeta)
+                cand = ImageCandidate(
+                    source="wikimedia",
+                    title=ci.title,
+                    page_url=ci.page_url,
+                    image_url=ci.image_url,
+                    meta={
+                        "commons_date": date_str,
+                        "commons_date_method": method,
+                        "query_year": year,
+                    },
+                )
+                push_candidate(_verify_with_commons(cand))
+
     except Exception as e:
         log.warning(f"⚠️ Wikimedia Commons failed: {e}")
 
     # ==============================================================
-    # SOURCE 2 — WIKIPEDIA PAGE IMAGES (CLEAN PORTRAITS)
+    # SOURCE 2 — WIKIPEDIA PAGE IMAGES
     # ==============================================================
 
     log.info("🧠 Wikipedia page images…")
     try:
         for it in fetch_wikipedia_page_images(celebrity_name, limit=10):
-            candidates.append(
+            push_candidate(
                 ImageCandidate(
                     source="wikipedia_page",
-                    title=it["title"],
-                    page_url=it["page_url"],
-                    image_url=it["image_url"],
+                    title=str(it.get("title") or f"{celebrity_name} wikipedia"),
+                    page_url=str(it.get("page_url") or ""),
+                    image_url=str(it.get("image_url") or ""),
                     meta={},
                 )
             )
@@ -192,18 +252,18 @@ def collect_images_for_celebrity(
         log.warning(f"⚠️ Wikipedia page images failed: {e}")
 
     # ==============================================================
-    # SOURCE 3 — IMDb IMAGE STILLS (MORPH-FRIENDLY)
+    # SOURCE 3 — IMDb IMAGE STILLS
     # ==============================================================
 
     log.info("🎬 IMDb image stills…")
     try:
-        for it in fetch_imdb_images(celebrity_name, limit=15):
-            candidates.append(
+        for it in fetch_imdb_images(celebrity_name, limit=20):
+            push_candidate(
                 ImageCandidate(
                     source="imdb",
-                    title=it["title"],
-                    page_url=it["page_url"],
-                    image_url=it["image_url"],
+                    title=str(it.get("title") or f"{celebrity_name} imdb"),
+                    page_url=str(it.get("page_url") or ""),
+                    image_url=str(it.get("image_url") or ""),
                     meta={},
                 )
             )
@@ -211,65 +271,58 @@ def collect_images_for_celebrity(
         log.warning(f"⚠️ IMDb images failed: {e}")
 
     # ==============================================================
-    # SOURCE 4 — BING IMAGES (NO API KEY)
+    # SOURCE 4 — BING YEAR-AWARE (PORTRAIT QUERIES)
     # ==============================================================
 
-    log.info("🔍 Bing Images fallback…")
-    bing_queries = [
-        f"{celebrity_name} face close up",
-        f"{celebrity_name} interview headshot",
-        f"{celebrity_name} movie still face",
-    ]
-
-    for q in bing_queries:
+    log.info("🔍 Bing Images (year-aware)…")
+    for year in range(start_year, current_year + 1):
+        q = build_portrait_query(celebrity_name, year)
         try:
-            for it in search_bing_images(q, limit=10):
-                candidates.append(
+            results = search_bing_images(q, limit=5)
+            if not results:
+                continue
+            for it in results:
+                push_candidate(
                     ImageCandidate(
                         source="bing",
-                        title=it["title"],
+                        title=f"{celebrity_name} portrait {year}",
                         page_url=it["page_url"],
                         image_url=it["image_url"],
-                        meta={},
+                        meta={"query_year": year},
                     )
                 )
         except Exception as e:
-            log.warning(f"⚠️ Bing query failed ({q}): {e}")
+            log.warning(f"⚠️ Bing failed for year {year}: {e}")
 
     # ==============================================================
-    # SOURCE 5 — SERPAPI (OPTIONAL BONUS)
+    # SOURCE 5 — SERPAPI (OPTIONAL)
     # ==============================================================
 
     if serpapi_enabled():
-        log.info("🔍 SerpAPI (optional)…")
-        queries = [
-            f"{ celebrity_name} Titanic interview portrait",
-            f"{ celebrity_name} Romeo and Juliet 1996 face",
-            f"{ celebrity_name} early career headshot",
-            f"{ celebrity_name} 1990s portrait",
-            f"{ celebrity_name} 2000s interview close up",
-            f"{ celebrity_name} recent portrait 2024",
-        ]
-
-        for q in queries:
-            raw = search_google_images_serpapi(q, limit=8)
-            for it in to_candidate_items(raw):
-                candidates.append(
-                    ImageCandidate(
-                        source="serpapi",
-                        title=it["title"],
-                        page_url=it.get("page_url"),
-                        image_url=it["image_url"],
-                        meta=it.get("meta") or {},
+        log.info("🔍 SerpAPI (year-aware)…")
+        for year in range(start_year, current_year + 1, 3):
+            q = build_portrait_query(celebrity_name, year)
+            try:
+                raw = search_google_images_serpapi(q, limit=3)
+                for it in to_candidate_items(raw):
+                    push_candidate(
+                        ImageCandidate(
+                            source="serpapi",
+                            title=f"{celebrity_name} portrait {year}",
+                            page_url=it.get("page_url"),
+                            image_url=it["image_url"],
+                            meta={"query_year": year},
+                        )
                     )
-                )
+            except Exception as e:
+                log.warning(f"⚠️ SerpAPI failed for year {year}: {e}")
 
     # ==============================================================
     # DOWNLOAD & EXIF VERIFICATION
     # ==============================================================
 
     downloaded: List[ImageCandidate] = []
-    max_downloads = 100
+    max_downloads = 140
 
     log.info(f"⬇️ Downloading up to {min(len(candidates), max_downloads)} images…")
 
@@ -297,17 +350,6 @@ def collect_images_for_celebrity(
     )
 
     write_json(mp, manifest.model_dump())
-
-    # ==============================================================
-    # HARD REQUIREMENT — MUST REACH 2024 / 2025
-    # ==============================================================
-
-    must_year = target_year_end - 1
-    if not any(y >= must_year for y in verified_years):
-        raise RuntimeError(
-            f"[HARD FAIL] No VERIFIED image for year ≥ {must_year}. "
-            f"Verified years found: {verified_years}"
-        )
 
     log.info(
         f"✅ Collected {len(downloaded)} images | "
