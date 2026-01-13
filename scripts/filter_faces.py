@@ -1,112 +1,81 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, Tuple
+import shutil
+import sys
 
 import cv2
 import numpy as np
 
-
-# ------------------------------------------------------------------
-# CONFIG (MORPH-FRIENDLY)
-# ------------------------------------------------------------------
-
-MIN_FACE_RATIO = 0.18      # % of image occupied by face
-MIN_FACE_SIZE = 120        # px
-OUTPUT_SIZE = 512          # aligned output size
+from src.face.quality_filter import FaceQualityFilter
 
 
-# ------------------------------------------------------------------
-# RESULT OBJECT
-# ------------------------------------------------------------------
-
-@dataclass
-class FaceCheckResult:
-    ok: bool
-    reason: str = ""
+INPUT_DIR = Path("images/raw")
+ACCEPTED_DIR = Path("faces/accepted")
+REJECTED_DIR = Path("faces/rejected")
 
 
-# ------------------------------------------------------------------
-# FACE QUALITY FILTER
-# ------------------------------------------------------------------
+def main() -> None:
+    print("🔍 Face filter starting...")
+    print(f"📂 INPUT_DIR = {INPUT_DIR.resolve()}")
 
-class FaceQualityFilter:
-    def __init__(self) -> None:
-        cascade_path = Path(__file__).parent / "assets" / "haarcascade_frontalface_default.xml"
+    if not INPUT_DIR.exists():
+        print("❌ images/raw directory does NOT exist")
+        sys.exit(1)
 
-        if not cascade_path.exists():
-            raise RuntimeError(
-                f"Haar cascade not found at {cascade_path}. "
-                f"Download haarcascade_frontalface_default.xml and place it there."
-            )
+    face_filter = FaceQualityFilter()
 
-        self.face_cascade = cv2.CascadeClassifier(str(cascade_path))
+    total_images = 0
+    accepted = 0
+    rejected = 0
 
-        if self.face_cascade.empty():
-            raise RuntimeError("Failed to load Haar cascade (file corrupted or invalid).")
+    for celeb_dir in INPUT_DIR.iterdir():
+        if not celeb_dir.is_dir():
+            continue
 
-    # --------------------------------------------------------------
-    # MAIN ENTRY
-    # --------------------------------------------------------------
+        print(f"\n👤 Processing celebrity folder: {celeb_dir.name}")
 
-    def check(self, image_path: Path) -> Tuple[FaceCheckResult, Optional[np.ndarray]]:
-        img = cv2.imread(str(image_path))
+        images = list(celeb_dir.iterdir())
+        if not images:
+            print("⚠️  No images found in this folder")
+            continue
 
-        if img is None:
-            return FaceCheckResult(False, "Unreadable image"), None
+        for img_path in images:
+            if not img_path.is_file():
+                continue
 
-        h, w = img.shape[:2]
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            total_images += 1
 
-        faces = self.face_cascade.detectMultiScale(
-            gray,
-            scaleFactor=1.1,
-            minNeighbors=5,
-            minSize=(MIN_FACE_SIZE, MIN_FACE_SIZE),
-        )
+            result, aligned = face_filter.check(img_path)
 
-        if len(faces) == 0:
-            return FaceCheckResult(False, "No face detected"), None
+            if result.ok:
+                if aligned is None:
+                    print(f"SKIPPED {img_path.name}: aligned image missing")
+                    continue
 
-        # Pick dominant face (largest area)
-        x, y, fw, fh = max(faces, key=lambda f: f[2] * f[3])
+                out_dir = ACCEPTED_DIR / celeb_dir.name
+                out_dir.mkdir(parents=True, exist_ok=True)
 
-        face_area = fw * fh
-        img_area = w * h
-        face_ratio = face_area / img_area
+                out_img = out_dir / img_path.name
+                cv2.imwrite(str(out_img), aligned)
 
-        if face_ratio < MIN_FACE_RATIO:
-            return (
-                FaceCheckResult(False, f"Face too small (ratio {face_ratio:.2f})"),
-                None,
-            )
+                accepted += 1
+                print(f"✅ ACCEPTED {img_path.name}")
 
-        aligned = self._align_and_crop(img, x, y, fw, fh)
+            else:
+                out_dir = REJECTED_DIR / celeb_dir.name
+                out_dir.mkdir(parents=True, exist_ok=True)
 
-        if aligned is None:
-            return FaceCheckResult(False, "Alignment failed"), None
+                shutil.copy(img_path, out_dir / img_path.name)
+                rejected += 1
+                print(f"❌ REJECTED {img_path.name}: {result.reason}")
 
-        return FaceCheckResult(True), aligned
+    print("\n📊 SUMMARY")
+    print(f"Total images: {total_images}")
+    print(f"Accepted: {accepted}")
+    print(f"Rejected: {rejected}")
+    print("✅ Face filtering complete")
 
-    # --------------------------------------------------------------
-    # ALIGNMENT
-    # --------------------------------------------------------------
 
-    def _align_and_crop(
-        self, img: np.ndarray, x: int, y: int, w: int, h: int
-    ) -> Optional[np.ndarray]:
-        img_h, img_w = img.shape[:2]
-
-        pad = int(0.25 * max(w, h))
-        x1 = max(0, x - pad)
-        y1 = max(0, y - pad)
-        x2 = min(img_w, x + w + pad)
-        y2 = min(img_h, y + h + pad)
-
-        crop = img[y1:y2, x1:x2]
-
-        if crop.size == 0:
-            return None
-
-        return cv2.resize(crop, (OUTPUT_SIZE, OUTPUT_SIZE))
+if __name__ == "__main__":
+    main()
